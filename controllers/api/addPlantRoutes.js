@@ -13,7 +13,7 @@ router.post('/add-plant', async (req, res) => {
         // Extract plant data from the form submission
         const { name, soilType, wateringInches, toxicToPets, sunlight, wateringFrequency } = req.body;
 
-        // Create a new plant record in the database
+        // Create a new plant record in the database- will flesh this out furhter in future development
         const newPlant = await Plant.create({
             plant_name,
             soilType,
