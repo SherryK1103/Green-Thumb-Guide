@@ -2,13 +2,13 @@ const router = require('express').Router();
 const { Plant } = require('../../models');
 
 // Route to render the form
-router.get('/add-plant', async (req, res) => {
+router.get('/addPlant', async (req, res) => {
     // Render the add-plant.handlebars view
-    res.render('add-plant');
+    res.render('addPlant');
 });
 
 // Route to handle form submission and add plant data
-router.post('/add-plant', async (req, res) => {
+router.post('/addPlant', async (req, res) => {
     try {
         // Extract plant data from the form submission
         const { name, soilType, wateringInches, toxicToPets, sunlight, wateringFrequency } = req.body;
