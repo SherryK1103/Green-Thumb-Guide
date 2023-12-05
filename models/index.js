@@ -1,5 +1,6 @@
 const User = require('./User');
 const Plant = require('./Plant');
+const addPlant = require('./addPlant');
 
 User.hasMany(Plant, {
   foreignKey: 'user_id',
@@ -10,4 +11,4 @@ Plant.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-module.exports = { User, Plant };
+module.exports = { User, Plant, addPlant };
